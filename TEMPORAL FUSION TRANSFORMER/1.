@@ -1,1 +1,38 @@
+```
+import os
+import copy
+import torch
+import warnings
+import numpy as np
+import pandas as pd
+from pathlib import Path
+import pytorch_lightning as pl
+from pytorch_forecasting.data import GroupNormalizer
+from pytorch_lightning.loggers import TensorBoardLogger
+from pytorch_forecasting.data.examples import get_stallion_data
+from pytorch_forecasting.metrics import SMAPE, PoissonLoss, QuantileLoss
+from pytorch_lightning.callbacks import EarlyStopping, LearningRateMonitor
+from pytorch_forecasting import Baseline, TemporalFusionTransformer, 
+TimeSeriesDataSet
+from pytorch_forecasting.models.temporal_fusion_transformer.tuning import 
+optimize_hyperparameters
+warnings.filterwarnings("ignore")
+```
 
+**###//EXPLANATION OF CODES AND THEIR THEORİCAL EXPLANATION,**
+**##pytorch_lightning** : 
+
+PyTorch Lightning is a lightweight, PyTorch-based framework designed to make your deep learning projects more efficient and organized. Here are its main advantages:
+
+Less Boilerplate Code: It eliminates repetitive, standard code for tasks like model training loops, optimization setups, and distributed training. This allows developers to focus on the model's architecture and experiment logic.
+
+Modular & Organized Structure: Using classes like LightningModule, it enables you to define your model, optimization strategy, and training/validation/testing steps in one place, improving code readability and organization.
+
+Easy Scalability: You can effortlessly scale your code from a single GPU to multiple GPUs, TPUs, or distributed systems without significant code changes, ensuring hardware independence.
+
+Reproducibility: By managing random seeds and standardizing experiment outputs, it helps ensure the reproducibility of deep learning experiments.
+
+Automated Training Routines: The Trainer class automatically manages the training, validation, testing, and prediction processes, reducing the need for manual loop writing and minimizing errors.
+
+
+  
