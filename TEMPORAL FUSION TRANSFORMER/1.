@@ -19,8 +19,8 @@ optimize_hyperparameters
 warnings.filterwarnings("ignore")
 ```
 
-**###//EXPLANATION OF CODES AND THEIR THEORİCAL EXPLANATION,**
-**##pytorch_lightning** : 
+###//EXPLANATION OF CODES AND THEIR THEORİCAL EXPLANATION
+##pytorch_lightning: 
 
 PyTorch Lightning is a lightweight, PyTorch-based framework designed to make your deep learning projects more efficient and organized. Here are its main advantages:
 
